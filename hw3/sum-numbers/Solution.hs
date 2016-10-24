@@ -1,3 +1,4 @@
+module Solution where
 import Data.String
 import Data.Char
 import Data.Bool
