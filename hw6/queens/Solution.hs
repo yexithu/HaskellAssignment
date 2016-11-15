@@ -19,6 +19,7 @@ solutionInt x [] = x
 solutionInt x left = foldl (\z ele -> bfsearch x left z ele) 0 left
   
 bfsearch :: Int -> [(Int, Int)] -> Int -> (Int, Int) -> Int
+bfsearch _ _ 8 _ = 8
 bfsearch x left z ele = let removed = filter (isSafe ele) left
                             y = solutionInt (x + 1) removed
                         in if y > z then y else z
